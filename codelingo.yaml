@@ -1,0 +1,3 @@
+tenets:
+  - import: codelingo/code-review-comments/context-first-arg
+  - import: codelingo/code-review-comments/declare-empty-slice
