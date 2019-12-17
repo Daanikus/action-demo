@@ -1,3 +1,5 @@
 tenets:
-  - import: codelingo/code-review-comments/context-first-arg
-  - import: codelingo/code-review-comments/declare-empty-slice
+- import: codelingo/code-review-comments/context-first-arg
+- import: codelingo/code-review-comments/declare-empty-slice
+- import: codelingo/cockroachdb/fmt-verbs
+- import: codelingo/cockroachdb
