@@ -11,7 +11,7 @@ func main() {
 }
 
 func Thing() {
-	t := []string{}
+	var t []string
 	fmt.Println(t)
 }
 
