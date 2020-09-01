@@ -8,7 +8,7 @@ import (
 type Bar struct {
 	ID    int    `json:"id"`
 	Name  string `yaml:"name"`
-	Thing string `json:"name yaml:"name"`
+	Thing string `json:"name" yaml:"name"`
 }
 
 func main() {
