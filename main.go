@@ -5,6 +5,11 @@ import (
 	"fmt"
 )
 
+type Bar struct {
+	ID   int    `json:"id"`
+	Name string `yaml:"name"`
+}
+
 func main() {
 	Thing()
 	foo("Hello", context.Background())
