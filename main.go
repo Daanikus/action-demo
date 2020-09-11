@@ -44,3 +44,26 @@ func ExampleDB_QueryRowContext() {
 		log.Printf("username is %q, account created on %s\n", username, created)
 	}
 }
+
+func ExampleDB_QueryRowContextBadOne() {
+	id := 123
+	var username string
+	var created time.Time
+	err := db.QueryRowContext(ctx, "SELECT username, created_at FROM users WHERE id=?", id).Scan(&username, &created)
+	switch {
+	case err != nil:
+		log.Fatalf("query error: %v\n", err)
+	default:
+		log.Printf("username is %q, account created on %s\n", username, created)
+	}
+}
+
+func ExampleDB_QueryRowContextBadTwo() {
+	id := 123
+	var username string
+	var created time.Time
+	err := db.QueryRowContext(ctx, "SELECT username, created_at FROM users WHERE id=?", id).Scan(&username, &created)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
