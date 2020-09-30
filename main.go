@@ -19,6 +19,7 @@ type Bar struct {
 	Thing string `json:"name" yaml:"name"`
 }
 
+
 func main() {
 	Thing()
 	foo("Hello", context.Background())
@@ -28,6 +29,12 @@ func main() {
 func Thing() {
 	t := []string{}
 	fmt.Println(t)
+	
+	channels, err := entchannel.List(c, ent.ID)
+	if err != nil {
+		c.AbortWithError(http.StatusInternalServerError, err)
+		return
+	}
 }
 
 func ExampleDB_QueryRowContext() {
