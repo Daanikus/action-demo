@@ -35,6 +35,10 @@ func Thing() {
 		c.AbortWithError(http.StatusInternalServerError, err)
 		return
 	}
+	
+	row := db.QueryRow(query, id)
+	
+	row := db.QueryRowContext(ctx, query, id)
 }
 
 func ExampleDB_QueryRowContext() {
