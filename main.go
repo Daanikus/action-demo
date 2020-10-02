@@ -19,26 +19,18 @@ type Bar struct {
 	Thing string `json:"name" yaml:"name"`
 }
 
-
 func main() {
 	Thing()
-	foo("Hello", context.Background())
 
 }
 
 func Thing() {
-	t := []string{}
-	fmt.Println(t)
-	
-	channels, err := entchannel.List(c, ent.ID)
-	if err != nil {
-		c.AbortWithError(http.StatusInternalServerError, err)
-		return
-	}
-	
+	id := 1
+	query := "dfsdf"
+
 	row := db.QueryRow(query, id)
-	
-	row := db.QueryRowContext(ctx, query, id)
+	fmt.Println(row)
+	row = db.QueryRowContext(ctx, query, id)
 }
 
 func ExampleDB_QueryRowContext() {
