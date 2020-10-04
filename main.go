@@ -21,6 +21,11 @@ type Bar struct {
 
 func main() {
 	Thing()
+	var buf [17]byte
+	fmt.Println(buf)
+	buf = make([]byte, 17)
+	fmt.Println(buf)
+	
 
 }
 
