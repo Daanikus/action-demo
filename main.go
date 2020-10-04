@@ -34,6 +34,7 @@ func Thing() {
 }
 
 func ExampleDB_QueryRowContext() {
+	defer fmt.Println("end")
 	id := 123
 	var username string
 	var created time.Time
