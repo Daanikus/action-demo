@@ -26,6 +26,10 @@ func main() {
 	buf = make([]byte, 17)
 	fmt.Println(buf)
 	
+	var b Bar
+	name := "foo"
+	b.Name = name
+	
 
 }
 
