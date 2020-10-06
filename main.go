@@ -29,6 +29,7 @@ func main() {
 	var b Bar
 	name := "foo"
 	b.Name = name
+	fmt.Println(name)
 	
 
 }
