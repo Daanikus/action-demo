@@ -26,6 +26,11 @@ func main() {
 	buf = make([]byte, 17)
 	fmt.Println(buf)
 	
+	err := "someerr"
+	fmt.Println("sdf")
+	if err != nil {
+	}
+	
 	var b Bar
 	name := "foo"
 	b.Name = name
