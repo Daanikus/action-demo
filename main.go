@@ -40,7 +40,6 @@ func main() {
 	
 	for _, s := range a {
 		if s == "foo" {
-			// Don't catch
 			fmt.Println(s)
 		}
 	}
