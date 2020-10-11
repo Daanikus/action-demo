@@ -36,6 +36,26 @@ func main() {
 	b.Name = name
 	fmt.Println(name)
 	
+	a := []string{"bar", "baz"}
+	
+	for _, s := range a {
+		if s == "foo" {
+			// Don't catch
+			fmt.Println(s)
+		}
+	}
+	
+	for _, s := range a {
+		if s == "foo" {
+			// Catch
+			fmt.Println(s)
+			fmt.Println(s)
+			fmt.Println(s)
+			fmt.Println(s)
+			fmt.Println(s)
+		}
+	}
+	
 
 }
 
